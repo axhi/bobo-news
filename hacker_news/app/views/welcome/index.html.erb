@@ -1,0 +1,16 @@
+<% @posts.each_with_index do |post, index| %>
+  <div class="title-line">
+    <span class="title-number"><%= index + 1 %>.</span>
+    <%= link_to post.url do %><%= post.title %><% end %>
+    <span class="post-url">(<%= post.url %>)</span>
+  </div>
+
+  <div class="comment-line">
+    <%= post.user.name %> <%= show_date(post.created_at) %> |
+    <%= link_to post_comments_path(post) do %> <%= post.comments.count %> comments <% end %>
+  </div>
+
+<% end %>
+
+
+

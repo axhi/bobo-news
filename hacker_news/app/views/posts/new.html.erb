@@ -1,0 +1,6 @@
+<h4>Submit</h4>
+<%= form_for @post do |f| %>
+  <div><%= f.text_field :title, :placeholder => "Title", maxlength: "60" %></div>
+  <div><%= f.text_field :url, :placeholder => "Url", maxlength: "60" %></div>
+  <%= f.submit %>
+<% end %>

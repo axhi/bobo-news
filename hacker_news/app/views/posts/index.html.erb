@@ -1,0 +1,7 @@
+<h4>Your Posts</h4>
+<% @posts.each do |post| %>
+    <div class="title-line">
+    <%= link_to post.url do %><%= post.title %><% end %>
+    <span class="post-url">(<%= post.url %>)</span>
+  </div>
+<% end %>

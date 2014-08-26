@@ -1,0 +1,20 @@
+ <div class="comment-page">
+ <div class="title-line push-ten">
+  <%= @post.title %>
+  <span class="post-url">(<%= @post.url %>)</span>
+</div>
+  <div class="comment-line">
+    <%= @post.user.name %> <%= show_date(@post.created_at) %> |
+    <%= link_to post_comments_path(@post) do %> <%= @post.comments.count %> comments <% end %>
+  </div>
+<% if @comment %>
+<%= form_for @comment, url: post_comments_path, method: :post, :html => {:class => "comment-form"} do |f| %>
+  <div><%= f.text_area :body_text, :placeholder => "Enter comment", cols: 60, rows: 5 %></div>
+  <%= f.submit %>
+<% end %>
+<% @comments.each do |comment| %>
+  <div class="comment-line"><%= comment.commenter.name %></div>
+  <p class="comment-body"><%= comment.body_text %></p>
+<% end %>
+<% end %>
+</div>

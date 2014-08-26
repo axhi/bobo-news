@@ -1,0 +1,26 @@
+<table class="user-page">
+  <tr>
+<td>User:</td>
+  <td><%= @user.name %> </td>
+</tr>
+<td>Created:</td>
+  <td><%= show_date(@user.created_at) %> </td>
+<tr>
+<td>Total Posts:</td>
+  <td><%= @user.posts.count %> </td>
+</tr>
+<td>Total Comments:</td>
+  <td><%= @user.comments.count %> </td>
+<tr>
+  <td></td>
+  <td>
+    <%= link_to 'see posts', user_posts_path(@user) %>
+  </td>
+</tr>
+<tr>
+  <td></td>
+  <td>
+    <%= link_to 'see comments', user_comments_path(@user) %>
+  </td>
+</tr>
+</table>

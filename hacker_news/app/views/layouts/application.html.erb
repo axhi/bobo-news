@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bobo News</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+<h4><span class="big-b">B</span><%= link_to 'Bobo News', root_path %></h4>
+</header>
+<nav>
+  <div class="left-nav">
+    new | comments | show | <%= link_to 'submit', new_post_path %>
+  </div>
+  <div class="right-nav">
+    <% if is_logged_in? %>
+      <%= link_to current_user, :class => 'user-name' do %><%= current_user.name%><% end %> | <%= link_to 'logout', logout_path %>
+    <% else %>
+      <%= link_to 'login', new_user_path %>
+    <% end %>
+  </div>
+</nav>
+
+<div class='container'>
+  <%= yield %>
+</div>
+
+</body>
+</html>

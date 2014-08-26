@@ -1,0 +1,117 @@
+body {
+  margin: auto 93px;
+  padding: 0;
+  font-family: 'verdana', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+header {
+  /*position: relative;*/
+  height: 25px;
+  margin-top: 8px;
+  background-color: #FF6600;
+}
+
+h4 {
+  margin: 0;
+  padding: 2px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav {
+/*  position: absolute;
+*/}
+
+.big-b {
+  border: 1px solid white;
+  padding:1px 4px;
+  margin-left: 0;
+  margin-right: 3px;
+  color:white;
+  font-weight: 100;
+}
+
+.left-nav {
+  position: absolute;
+  top: 15px;
+  margin-left: 130px;
+}
+
+.right-nav {
+  position: absolute;
+  top: 15px;
+  right: 105px;
+}
+
+.user-name {
+  color: green;
+}
+
+.container {
+  background-color: #f6f6ef;
+  padding-top: 8px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+}
+
+.title-number {
+  color: #808080;
+}
+
+.post-url {
+  font-size: .8em;
+  color: #808080;
+}
+
+.comment-line {
+  font-size: .8em;
+  color: #808080;
+  margin-bottom:5px;
+  margin-left: 17px;
+}
+
+.comment-line a {
+  color: #808080;
+}
+
+.comment-body {
+  margin-left:18px;
+  margin-top: 1px;
+}
+
+.comment-form {
+  margin-left: 17px;
+  margin-bottom: 30px;
+  margin-top:20px;
+}
+.push-ten {
+  margin-left: 15px;
+}
+.comment-page {
+  padding:5px;
+}
+
+.user-page {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  color: #808080;
+}
+.user-page td {
+  padding-right: 40px;
+}
+
+.user-page a {
+  text-decoration: underline;
+}

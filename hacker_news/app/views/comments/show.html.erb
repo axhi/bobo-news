@@ -1,0 +1,4 @@
+<% @comments.each do |comment| %>
+ <div class="title-line push-ten"><%= comment.post.title %></div>
+  <div class="comment-line"><%= comment.body_text %></div>
+<% end %>
