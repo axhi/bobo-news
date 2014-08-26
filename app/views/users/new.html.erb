@@ -1,14 +1,17 @@
+<%if @errors %>
+<%= @errors %>
+<% end %>
 <h2>Login</h2>
 <%= form_for @user, url: login_path, method: :post  do |f| %>
-  <%= f.email_field :email, :placeholder => "Email" %>
-  <%= f.password_field :password, :placeholder => "Password" %>
-  <%= f.submit %>
+  <div><%= f.email_field :email, :placeholder => "Email" %></div>
+  <div><%= f.password_field :password, :placeholder => "Password" %></div>
+  <%= f.submit "login" %>
 <% end %>
 <h2>Create Account</h2>
 <%= form_for @user do |f| %>
-  <%= f.text_field :name, :placeholder => "User Name" %>
-  <%= f.email_field :email, :placeholder => "Email" %>
-  <%= f.password_field :password, :placeholder => "Password" %>
-  <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %>
-  <%= f.submit %>
+  <div><%= f.text_field :name, :placeholder => "User Name" %></div>
+  <div><%= f.email_field :email, :placeholder => "Email" %></div>
+  <div><%= f.password_field :password, :placeholder => "Password" %></div>
+  <div><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></div>
+  <%= f.submit "create account" %>
 <% end %>

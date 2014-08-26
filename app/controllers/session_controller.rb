@@ -2,11 +2,13 @@ class SessionController < ActionController::Base
 
   def login
     @user = User.find_by(email: user_params[:email])
-    if @user.authenticate(user_params[:password])
+    if @user == nil
+      redirect_to new_user_path
+    elsif @user.authenticate(user_params[:password])
       session[:user_id] = @user.id
       redirect_to root_path
     else
-      render '/users/new'
+      redirect_to new_user_path
     end
   end
 
